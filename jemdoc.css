@@ -49,3 +49,11 @@ table.news td{border:none;padding:2px 0;vertical-align:top;text-align:left;}
 table.news td.news-date{width:90px;color:#888;font-size:.88em;white-space:nowrap;padding-right:12px;}
 
 @media print{#layout-menu{display:none;}}
+
+/* ── Responsive ── */
+@media (max-width: 640px) {
+  #layout-content { padding: 16px 6% 40px !important; }
+  table.imgtable tr { display: flex; flex-direction: column; align-items: center; }
+  table.imgtable td { padding-left: 0 !important; text-align: center; }
+  table.imgtable img { width: 200px !important; margin-bottom: 16px; }
+}
