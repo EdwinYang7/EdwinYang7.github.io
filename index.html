@@ -1,397 +1,152 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+  "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
 <head>
-  <meta charset="UTF-8" />
+  <meta name="generator" content="jemdoc" />
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="jemdoc.css" type="text/css" />
   <title>Jiaming Yang</title>
-  <style>
-    /* ── Reset ── */
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-    /* ── Global ── */
-    body {
-      font-family: Georgia, "Times New Roman", serif;
-      font-size: 15px;
-      line-height: 1.7;
-      color: #333;
-      background: #fff;
-      display: flex;
-      min-height: 100vh;
-    }
-
-    a { color: #224b8d; text-decoration: none; }
-    a:hover { text-decoration: underline; }
-
-    /* ── Left sidebar ── */
-    #sidebar {
-      width: 200px;
-      flex-shrink: 0;
-      background: #f5f5f5;
-      border-right: 1px solid #ddd;
-      padding: 30px 0;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-
-    #sidebar .site-name {
-      font-size: 1rem;
-      font-weight: bold;
-      color: #222;
-      text-align: center;
-      padding: 0 16px 20px;
-      border-bottom: 1px solid #ddd;
-      width: 100%;
-      text-align: center;
-    }
-
-    #sidebar nav {
-      width: 100%;
-      margin-top: 16px;
-    }
-
-    #sidebar nav a {
-      display: block;
-      padding: 6px 24px;
-      color: #224b8d;
-      font-size: 0.92rem;
-    }
-
-    #sidebar nav a:hover {
-      background: #e8e8e8;
-      text-decoration: none;
-    }
-
-    #sidebar nav a.active {
-      font-weight: bold;
-      color: #111;
-    }
-
-    /* ── Main content ── */
-    #main {
-      flex: 1;
-      padding: 40px 48px 60px;
-      max-width: 860px;
-    }
-
-    /* ── Profile block ── */
-    .profile {
-      display: flex;
-      gap: 36px;
-      align-items: flex-start;
-      margin-bottom: 36px;
-    }
-
-    .profile img {
-      width: 160px;
-      height: 160px;
-      object-fit: cover;
-      border: none;
-      flex-shrink: 0;
-      /* placeholder if no photo */
-      background: linear-gradient(135deg, #c0cfe8 0%, #2a4a7f 100%);
-    }
-
-    .profile-info h1 {
-      font-size: 1.6rem;
-      font-weight: bold;
-      color: #111;
-      margin-bottom: 6px;
-      border: none;
-    }
-
-    .profile-info p {
-      margin: 3px 0;
-      font-size: 0.93rem;
-      color: #444;
-    }
-
-    .contact-list {
-      margin-top: 12px;
-      font-size: 0.9rem;
-    }
-
-    .contact-list span {
-      display: inline-block;
-      margin-right: 18px;
-      color: #555;
-    }
-
-    .contact-list span::before {
-      margin-right: 4px;
-    }
-
-    /* ── Section headings ── */
-    h2 {
-      font-size: 1.15rem;
-      font-weight: bold;
-      color: #527bbd;
-      border-bottom: 1px solid #527bbd;
-      padding-bottom: 3px;
-      margin: 36px 0 14px;
-    }
-
-    /* ── Paragraphs ── */
-    p { margin-bottom: 10px; }
-
-    /* ── Research interests tags ── */
-    .interest-list {
-      list-style: none;
-      padding: 0;
-      margin: 0 0 8px;
-    }
-
-    .interest-list li {
-      padding-left: 1.1em;
-      position: relative;
-      margin-bottom: 3px;
-      font-size: 0.93rem;
-    }
-
-    .interest-list li::before {
-      content: "▸";
-      position: absolute;
-      left: 0;
-      color: #527bbd;
-    }
-
-    /* ── Publications ── */
-    .pub-list {
-      list-style: none;
-      padding: 0;
-    }
-
-    .pub-list li {
-      margin-bottom: 22px;
-      padding-left: 0;
-    }
-
-    .pub-title {
-      font-weight: bold;
-      color: #222;
-      line-height: 1.45;
-    }
-
-    .pub-authors {
-      font-size: 0.9rem;
-      color: #555;
-      margin: 2px 0;
-    }
-
-    .pub-authors .me {
-      font-weight: bold;
-      color: #333;
-    }
-
-    .pub-venue {
-      font-size: 0.88rem;
-      color: #527bbd;
-      font-style: italic;
-    }
-
-    .pub-links {
-      margin-top: 4px;
-      font-size: 0.85rem;
-    }
-
-    .pub-links a {
-      margin-right: 10px;
-      color: #224b8d;
-    }
-
-    /* ── News ── */
-    .news-list {
-      list-style: none;
-      padding: 0;
-    }
-
-    .news-list li {
-      display: flex;
-      gap: 16px;
-      margin-bottom: 7px;
-      font-size: 0.92rem;
-    }
-
-    .news-date {
-      flex-shrink: 0;
-      width: 88px;
-      color: #777;
-      font-size: 0.85rem;
-      padding-top: 2px;
-    }
-
-    /* ── Teaching ── */
-    .teaching-list {
-      list-style: none;
-      padding: 0;
-    }
-
-    .teaching-list li {
-      margin-bottom: 14px;
-      font-size: 0.93rem;
-    }
-
-    .teaching-list .course-name {
-      font-weight: bold;
-      color: #222;
-    }
-
-    .teaching-list .course-role {
-      color: #555;
-    }
-
-    .teaching-list .course-term {
-      color: #777;
-      font-style: italic;
-      font-size: 0.88rem;
-    }
-
-    /* ── Footer ── */
-    #footer {
-      margin-top: 48px;
-      padding-top: 16px;
-      border-top: 1px solid #ddd;
-      font-size: 0.8rem;
-      color: #999;
-    }
-
-    /* ── Responsive ── */
-    @media (max-width: 640px) {
-      body { flex-direction: column; }
-      #sidebar { width: 100%; border-right: none; border-bottom: 1px solid #ddd; padding: 16px 0; }
-      #sidebar nav { display: flex; flex-wrap: wrap; justify-content: center; }
-      #sidebar nav a { padding: 4px 14px; }
-      #main { padding: 24px 20px 40px; }
-      .profile { flex-direction: column; align-items: center; text-align: center; }
-    }
-  </style>
 </head>
 <body>
 
-<!-- ── SIDEBAR ── -->
-<div id="sidebar">
-  <div class="site-name">Jiaming Yang</div>
-  <nav>
-    <a href="#about" class="active">Home</a>
-    <a href="#research">Research</a>
-    <a href="#publications">Publications</a>
-    <a href="#teaching">Teaching</a>
-    <a href="cv.pdf" target="_blank">CV</a>
-  </nav>
-</div>
+<table summary="Table for page layout." id="tlayout">
+<tr valign="top">
 
-<!-- ── MAIN ── -->
-<div id="main">
+<!-- ═══════════════ LEFT MENU ═══════════════ -->
+<td id="layout-menu">
+  <div class="menu-category">Jiaming Yang</div>
+  <div class="menu-item"><a href="index.html" class="current">Home</a></div>
+  <div class="menu-item"><a href="#publications">Publications</a></div>
+  <div class="menu-item"><a href="#teaching">Teaching</a></div>
+  <div class="menu-item"><a href="cv.pdf" target="_blank">CV</a></div>
+</td>
 
-  <!-- Profile -->
-  <div class="profile">
-    <img src="photo.jpg" alt="Jiaming Yang"
-         onerror="this.style.background='linear-gradient(135deg,#c0cfe8,#2a4a7f)'" />
-    <div class="profile-info">
-      <h1>Jiaming Yang</h1>
-      <p>Ph.D. Student in Computer Science</p>
-      <p>University of Michigan</p>
-      <p>Advisor: <a href="https://web.eecs.umich.edu/~derezin/">Prof. Michał Dereziński</a></p>
-      <div class="contact-list">
-        <span>📧 <a href="mailto:jiamyang@umich.edu">jiamyang@umich.edu</a></span>
-        <br/>
-        <span style="margin-top:6px; display:inline-block;">
-          <a href="https://scholar.google.com/citations?user=QBsx7kAAAAAJ&hl=en" target="_blank">[Google Scholar]</a>
-          &nbsp;
-          <a href="https://x.com/jiaming_edwin" target="_blank">[Twitter/X]</a>
-          &nbsp;
-          <a href="https://www.linkedin.com/in/jiaming-yang-737140212/" target="_blank">[LinkedIn]</a>
-          &nbsp;
-          <a href="cv.pdf" target="_blank">[CV]</a>
-        </span>
-      </div>
-    </div>
+<!-- ═══════════════ CONTENT ═══════════════ -->
+<td id="layout-content">
+
+  <!-- ── Title ── -->
+  <div id="toptitle">
+    <h1>Jiaming Yang</h1>
   </div>
 
-  <!-- About -->
-  <h2 id="about">About Me</h2>
+  <!-- ── Profile photo + bio ── -->
+  <table class="imgtable">
+    <tr>
+      <td>
+        <img src="photo.jpg" alt="Jiaming Yang"
+             width="160px"
+             onerror="this.style.display='none'" />&nbsp;
+      </td>
+      <td style="vertical-align:top; padding-left:18px;">
+        <p>
+          Ph.D. Student in Computer Science<br />
+          <a href="https://cse.engin.umich.edu/">University of Michigan</a><br />
+          Advisor: <a href="https://web.eecs.umich.edu/~derezin/">Prof. Michał Dereziński</a>
+        </p>
+        <p>
+          📧 <a href="mailto:jiamyang@umich.edu">jiamyang@umich.edu</a>
+        </p>
+        <p>
+          <a href="https://scholar.google.com/citations?user=QBsx7kAAAAAJ&amp;hl=en">[Google Scholar]</a>
+          &nbsp;
+          <a href="https://x.com/jiaming_edwin">[Twitter / X]</a>
+          &nbsp;
+          <a href="https://www.linkedin.com/in/jiaming-yang-737140212/">[LinkedIn]</a>
+          &nbsp;
+          <a href="cv.pdf">[CV]</a>
+        </p>
+      </td>
+    </tr>
+  </table>
+
+  <!-- ── About ── -->
+  <h2>About Me</h2>
   <p>
-    I am a fourth-year Ph.D. student in Computer Science at the University of Michigan,
-    where I am advised by <a href="https://web.eecs.umich.edu/~derezin/">Prof. Michał Dereziński</a>.
+    I am a fourth-year Ph.D. student in Computer Science at the
+    <a href="https://cse.engin.umich.edu/">University of Michigan</a>,
+    where I am advised by
+    <a href="https://web.eecs.umich.edu/~derezin/">Prof. Michał Dereziński</a>.
     Prior to that, I received my bachelor's degree from the School of Mathematical Sciences
     at Peking University.
   </p>
   <p>
-    My current research focuses on <strong>randomized numerical linear algebra (RandNLA)</strong>,
-    with applications to large-scale optimization and machine learning. More broadly, I am
-    interested in machine learning, statistics, and optimization, with a focus on their
-    theoretical foundations.
+    My current research focuses on <b>randomized numerical linear algebra (RandNLA)</b>,
+    with applications to large-scale optimization and machine learning.
+    More broadly, I am interested in machine learning, statistics, and optimization,
+    with a focus on their theoretical foundations.
   </p>
 
-  <!-- Research -->
-  <h2 id="research">Research Interests</h2>
-  <ul class="interest-list">
-    <li>Randomized Numerical Linear Algebra (RandNLA)</li>
-    <li>Machine Learning Theory</li>
-    <li>Large-Scale Optimization</li>
-    <li>Statistics and Theoretical Foundations of ML</li>
+  <!-- ── Research Interests ── -->
+  <h2>Research Interests</h2>
+  <ul>
+    <li><p>Randomized Numerical Linear Algebra (RandNLA)</p></li>
+    <li><p>Machine Learning Theory</p></li>
+    <li><p>Large-Scale Optimization</p></li>
+    <li><p>Statistics and Theoretical Foundations of ML</p></li>
   </ul>
 
-  <!-- News -->
+  <!-- ── News ── -->
   <h2>News</h2>
-  <ul class="news-list">
-    <li>
-      <span class="news-date">Apr 2026</span>
-      <span>Paper accepted to <strong>Conference Name</strong> — [brief description].</span>
-    </li>
-    <li>
-      <span class="news-date">Jan 2026</span>
-      <span>Started internship at <strong>Company Name</strong> as a Research Intern.</span>
-    </li>
-    <li>
-      <span class="news-date">Sep 2025</span>
-      <span>Paper accepted to <strong>Conference Name</strong>.</span>
-    </li>
-  </ul>
+  <table class="news">
+    <tr>
+      <td class="news-date">Apr 2026</td>
+      <td>Paper accepted to <b>Conference Name</b> &mdash; [brief description].</td>
+    </tr>
+    <tr>
+      <td class="news-date">Jan 2026</td>
+      <td>Started internship at <b>Company Name</b> as a Research Intern.</td>
+    </tr>
+    <tr>
+      <td class="news-date">Sep 2025</td>
+      <td>Paper accepted to <b>Conference Name</b>.</td>
+    </tr>
+  </table>
 
-  <!-- Publications -->
+  <!-- ── Publications ── -->
   <h2 id="publications">Publications</h2>
-  <ul class="pub-list">
+  <ul class="pub">
     <li>
-      <div class="pub-title">Solving Dense Linear Systems Faster than via Preconditioning</div>
-      <div class="pub-authors"><span class="me">Jiaming Yang</span>, Michał Dereziński</div>
-      <div class="pub-venue">Manuscript, 2025</div>
-      <div class="pub-links">
+      <span class="pub-title">Solving Dense Linear Systems Faster than via Preconditioning</span><br />
+      <b>Jiaming Yang</b>, Michał Dereziński<br />
+      <span class="pub-venue">Manuscript, 2025</span><br />
+      <span class="pub-links">
         <a href="#">[paper]</a>
         <a href="#">[arXiv]</a>
         <a href="#">[slides]</a>
-      </div>
+      </span>
     </li>
     <!-- Add more publications here -->
   </ul>
 
-  <!-- Teaching -->
+  <!-- ── Teaching ── -->
   <h2 id="teaching">Teaching</h2>
-  <ul class="teaching-list">
+  <ul>
     <li>
-      <span class="course-name">EECS 572: Randomness and Computation</span><br/>
-      <span class="course-role">Graduate Student Instructor (GSI)</span>
-      &nbsp;·&nbsp;
-      <span class="course-term">Winter 2026, University of Michigan</span>
-      <br/>
-      <span style="font-size:0.88rem; color:#666;">
+      <p>
+        <b>EECS 572: Randomness and Computation</b>, University of Michigan<br />
+        Graduate Student Instructor (GSI), Winter 2026<br />
         Probability tools for algorithm design; randomized data structures, sketching, streaming, and sampling.
-      </span>
+      </p>
     </li>
     <li>
-      <span class="course-name">[Course Number]: [Course Name]</span><br/>
-      <span class="course-role">Graduate Student Instructor (GSI)</span>
-      &nbsp;·&nbsp;
-      <span class="course-term">[Semester Year], University of Michigan</span>
+      <p>
+        <b>[Course Number]: [Course Name]</b>, University of Michigan<br />
+        Graduate Student Instructor (GSI), [Semester Year]
+      </p>
     </li>
   </ul>
 
-  <!-- Footer -->
+  <!-- ── Footer ── -->
   <div id="footer">
-    &copy; 2026 Jiaming Yang &nbsp;·&nbsp; Last updated April 2026
+    <div id="footer-text">
+      &copy; 2026 Jiaming Yang &nbsp;&middot;&nbsp; Last updated April 2026
+    </div>
   </div>
 
-</div><!-- /main -->
+</td>
+</tr>
+</table>
 
 </body>
 </html>
