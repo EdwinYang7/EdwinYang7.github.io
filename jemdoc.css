@@ -57,3 +57,9 @@ table.news td.news-date{width:90px;color:#888;font-size:.88em;white-space:nowrap
   table.imgtable td { padding-left: 0 !important; }
   table.imgtable img { width: 200px !important; margin-bottom: 16px; }
 }
+
+/* ── TL;DR toggles ── */
+ul.pub .tldr-toggle{background:none;border:none;padding:0;margin-right:.6em;font:inherit;font-size:.9em;color:#224b8d;cursor:pointer;}
+ul.pub .tldr-toggle:hover{border-bottom:1px gray dotted;}
+ul.pub .tldr{margin-top:.4em;padding:.45em .8em;border-left:3px solid #527bbd;background:#f5f7fb;font-size:.92em;line-height:1.4;color:#333;}
+ul.pub .tldr .katex{font-size:1.08em;}

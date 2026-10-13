@@ -5,8 +5,12 @@
   <meta name="generator" content="jemdoc" />
   <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="jemdoc.css" type="text/css" />
+  <link rel="stylesheet" href="jemdoc.css?v=20261013b" type="text/css" />
   <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" />
+  <script defer="defer" src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+  <script defer="defer" src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"
+          onload="renderMathInElement(document.body, {delimiters: [{left: '\\(', right: '\\)', display: false}]});"></script>
   <title>Jiaming Yang</title>
 </head>
 <body>
@@ -84,56 +88,65 @@
     <li>
       <span class="pub-title">Acc-RSRN: Accelerated Randomized Subspace Regularized Newton</span><br />
       <b>J. Yang</b>, P.-L. Poirion, A. Takeda, M. Dereziński<br />
-      <span class="pub-venue">Under review, 2026</span>
+      <span class="pub-venue">Under review, 2026</span><br />
+      <span class="pub-links"><button type="button" class="tldr-toggle" aria-expanded="false" aria-controls="tldr-1">[TL;DR]</button></span>
+      <div class="tldr" id="tldr-1" hidden>We accelerate randomized subspace Newton methods using sharper spectral-tail analysis and Nesterov momentum, achieving faster local convergence for smooth, possibly nonconvex optimization.</div>
     </li>
 
     <li>
       <span class="pub-title">Have ASkotch: A Neat Solution for Large-scale Kernel Ridge Regression</span><br />
       P. Rathore, Z. Frangella, <b>J. Yang</b>, M. Dereziński, M. Udell<br />
       <span class="pub-venue">Journal of Machine Learning Research (JMLR), 2026</span><br />
-      <span class="pub-links"><a href="https://www.jmlr.org/papers/v27/25-0385.html">[JMLR]</a><a href="https://arxiv.org/abs/2407.10070">[arXiv]</a></span>
+      <span class="pub-links"><button type="button" class="tldr-toggle" aria-expanded="false" aria-controls="tldr-2">[TL;DR]</button><a href="https://www.jmlr.org/papers/v27/25-0385.html">[JMLR]</a><a href="https://arxiv.org/abs/2407.10070">[arXiv]</a></span>
+      <div class="tldr" id="tldr-2" hidden>A scalable, accelerated iterative solver for full kernel ridge regression, avoiding the accuracy loss of inducing-point approximations. It provably converges linearly and outperforms state-of-the-art full and inducing-point KRR solvers on 23 large-scale tasks.</div>
     </li>
 
     <li>
       <span class="pub-title">Randomized Kaczmarz Methods with Beyond-Krylov Convergence</span><br />
       (&alpha;-&beta;) M. Dereziński, D. Needell, E. Rebrova, <b>J. Yang</b><br />
       <span class="pub-venue">SIAM Journal on Matrix Analysis and Applications, 2025</span><br />
-      <span class="pub-links"><a href="https://doi.org/10.1137/25M1727187">[SIMAX]</a><a href="https://arxiv.org/abs/2501.11673">[arXiv]</a></span>
+      <span class="pub-links"><button type="button" class="tldr-toggle" aria-expanded="false" aria-controls="tldr-3">[TL;DR]</button><a href="https://doi.org/10.1137/25M1727187">[SIMAX]</a><a href="https://arxiv.org/abs/2501.11673">[arXiv]</a></span>
+      <div class="tldr" id="tldr-3" hidden>An accelerated randomized block Kaczmarz method that exploits outlying singular values to achieve Krylov-style convergence, capturing large outliers provably faster than popular Krylov methods. Its PSD variant, CD++, is competitive with CG and GMRES on benchmarks.</div>
     </li>
 
     <li>
       <span class="pub-title">Faster Linear Systems and Matrix Norm Approximation via Multi-Level Sketched Preconditioning</span><br />
       (&alpha;-&beta;) M. Dereziński, C. Musco, <b>J. Yang</b><br />
       <span class="pub-venue">Proceedings of the 2025 Annual ACM-SIAM Symposium on Discrete Algorithms (SODA), 2025</span><br />
-      <span class="pub-links"><a href="https://doi.org/10.1137/1.9781611978322.62">[SODA]</a><a href="https://arxiv.org/abs/2405.05865">[arXiv]</a></span>
+      <span class="pub-links"><button type="button" class="tldr-toggle" aria-expanded="false" aria-controls="tldr-4">[TL;DR]</button><a href="https://doi.org/10.1137/1.9781611978322.62">[SODA]</a><a href="https://arxiv.org/abs/2405.05865">[arXiv]</a></span>
+      <div class="tldr" id="tldr-4" hidden>Builds a Nyström preconditioner via sparse sketching, then inverts it quickly with further levels of sketching and preconditioning. This gives faster algorithms for linear systems with a few large outlying singular values, regularized systems from Gaussian process regression, and nuclear/Schatten-norm approximation.</div>
     </li>
 
     <li>
       <span class="pub-title">Solving Dense Linear Systems Faster than via Preconditioning</span><br />
       (&alpha;-&beta;) M. Dereziński, <b>J. Yang</b><br />
       <span class="pub-venue">Proceedings of the 56th Annual ACM Symposium on Theory of Computing (STOC), 2024</span><br />
-      <span class="pub-links"><a href="https://doi.org/10.1145/3618260.3649694">[STOC]</a><a href="https://arxiv.org/abs/2312.08893">[arXiv]</a></span>
+      <span class="pub-links"><button type="button" class="tldr-toggle" aria-expanded="false" aria-controls="tldr-5">[TL;DR]</button><a href="https://doi.org/10.1145/3618260.3649694">[STOC]</a><a href="https://arxiv.org/abs/2312.08893">[arXiv]</a></span>
+      <div class="tldr" id="tldr-5" hidden>A stochastic solver for dense \(n \times n\) linear systems running in \(\tilde{O}(n^2 + nk^{\omega-1})\) time, where \(k\) is the number of large singular values <span style="white-space:nowrap">(\(\tilde{O}(n^2)\)</span> when \(k = O(n^{0.729})\)). For flat-tailed spectra, it beats both direct solvers and preconditioned CG.</div>
     </li>
 
     <li>
       <span class="pub-title">HERTA: A High-Efficiency and Rigorous Training Algorithm for Unfolded Graph Neural Networks</span><br />
       Y. Yang, <b>J. Yang</b>, W. Hu, M. Dereziński<br />
       <span class="pub-venue">Mathematics of Modern Machine Learning (M3L, NeurIPS), 2024</span><br />
-      <span class="pub-links"><a href="https://arxiv.org/abs/2403.18142">[arXiv]</a></span>
+      <span class="pub-links"><button type="button" class="tldr-toggle" aria-expanded="false" aria-controls="tldr-6">[TL;DR]</button><a href="https://arxiv.org/abs/2403.18142">[arXiv]</a></span>
+      <div class="tldr" id="tldr-6" hidden>Trains Unfolded GNNs with a nearly-linear worst-case time guarantee while converging to the optimum of the original model, preserving its interpretability. As a byproduct, it introduces a new spectral sparsifier for normalized and regularized graph Laplacians.</div>
     </li>
 
     <li>
       <span class="pub-title">Federated Adversarial Learning: A Framework with Convergence Analysis</span><br />
       (&alpha;-&beta;) X. Li, Z. Song, <b>J. Yang</b><br />
       <span class="pub-venue">International Conference on Machine Learning (ICML), 2023</span><br />
-      <span class="pub-links"><a href="https://proceedings.mlr.press/v202/li23z.html">[ICML]</a><a href="https://arxiv.org/abs/2208.03635">[arXiv]</a></span>
+      <span class="pub-links"><button type="button" class="tldr-toggle" aria-expanded="false" aria-controls="tldr-7">[TL;DR]</button><a href="https://proceedings.mlr.press/v202/li23z.html">[ICML]</a><a href="https://arxiv.org/abs/2208.03635">[arXiv]</a></span>
+      <div class="tldr" id="tldr-7" hidden>Proposes federated adversarial learning, cast as a min-max problem. Proves convergence in the over-parameterized regime despite multiple local updates and non-IID clients.</div>
     </li>
 
     <li>
       <span class="pub-title">Pixelated Butterfly: Simple and Efficient Sparse Training for Neural Network Models</span><br />
       B. Chen, T. Dao, K. Liang, <b>J. Yang</b>, Z. Song, A. Rudra, C. Ré<br />
       <span class="pub-venue">International Conference on Learning Representations (ICLR), 2022, Spotlight</span><br />
-      <span class="pub-links"><a href="https://openreview.net/forum?id=Nfl-iXa-y7R">[ICLR]</a><a href="https://arxiv.org/abs/2112.00029">[arXiv]</a></span>
+      <span class="pub-links"><button type="button" class="tldr-toggle" aria-expanded="false" aria-controls="tldr-8">[TL;DR]</button><a href="https://openreview.net/forum?id=Nfl-iXa-y7R">[ICLR]</a><a href="https://arxiv.org/abs/2112.00029">[arXiv]</a></span>
+      <div class="tldr" id="tldr-8" hidden>Sparsifies attention and MLP layers with a fixed, hardware-friendly pattern of flat block butterfly plus low-rank matrices. Trains MLP-Mixer, ViT and GPT-2 medium up to 2.5&times; faster than dense models on ImageNet and WikiText-103 with no drop in accuracy.</div>
     </li>
 
   </ul>
@@ -171,6 +184,16 @@
   </div>
 
 </div>
+
+<script>
+  document.querySelectorAll('.tldr-toggle').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var box = document.getElementById(btn.getAttribute('aria-controls'));
+      box.hidden = !box.hidden;
+      btn.setAttribute('aria-expanded', String(!box.hidden));
+    });
+  });
+</script>
 
 </body>
 </html>
