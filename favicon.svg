@@ -1,5 +1,13 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-  <rect width="64" height="64" rx="8" fill="#00274C"/>
-  <text x="32" y="45" font-family="Georgia, serif" font-size="30" font-weight="bold"
-        fill="#FFCB05" text-anchor="middle" letter-spacing="-1">JY</text>
+  <rect width="64" height="64" rx="14" fill="#00274C"/>
+  <g fill="#1E4470">
+    <rect x="8" y="8" width="9" height="9" rx="2"/><rect x="8" y="34" width="9" height="9" rx="2"/><rect x="8" y="47" width="9" height="9" rx="2"/>
+    <rect x="21" y="8" width="9" height="9" rx="2"/><rect x="21" y="21" width="9" height="9" rx="2"/><rect x="21" y="34" width="9" height="9" rx="2"/>
+    <rect x="34" y="21" width="9" height="9" rx="2"/><rect x="34" y="34" width="9" height="9" rx="2"/><rect x="34" y="47" width="9" height="9" rx="2"/>
+    <rect x="47" y="8" width="9" height="9" rx="2"/><rect x="47" y="21" width="9" height="9" rx="2"/><rect x="47" y="47" width="9" height="9" rx="2"/>
+  </g>
+  <g fill="#FFCB05">
+    <rect x="8" y="21" width="9" height="9" rx="2"/><rect x="21" y="47" width="9" height="9" rx="2"/>
+    <rect x="34" y="8" width="9" height="9" rx="2"/><rect x="47" y="34" width="9" height="9" rx="2"/>
+  </g>
 </svg>
