@@ -11,7 +11,7 @@
 </head>
 <body>
 
-<div id="layout-content" style="width:100%; padding:20px 48px 60px;">
+<div id="layout-content" style="width:100%; box-sizing:border-box; padding:20px 48px 60px;">
 
   <!-- ── Title ── -->
   <div id="toptitle">
@@ -46,8 +46,11 @@
 
   <!-- ── About ── -->
   <h2>About Me</h2>
+  <p style="color:#c00;">
+    <b>I am on the job market and expect to graduate in May 2027.</b>
+  </p>
   <p>
-    I am a fourth-year Ph.D. student in Computer Science at the
+    I am a fifth-year Ph.D. student in Computer Science at the
     <a href="https://cse.engin.umich.edu/">University of Michigan</a>,
     where I am advised by
     <a href="https://web.eecs.umich.edu/~derezin/">Prof. Michał Dereziński</a>.
@@ -70,12 +73,19 @@
     <li><p>Randomized Numerical Linear Algebra (RandNLA)</p></li>
     <li><p>Machine Learning Theory</p></li>
     <li><p>Large-Scale Optimization</p></li>
+    <li><p>Matrix-Based Optimizers for LLM Training (e.g., Muon, Shampoo)</p></li>
   </ul>
 
   <!-- ── Publications ── -->
   <h2 id="publications">Publications</h2>
   <p style="font-size:.9em; color:#555;">&alpha;-&beta; indicates alphabetical author order.</p>
   <ul class="pub">
+
+    <li>
+      <span class="pub-title">Accelerating Randomized Subspace Newton via Regularized Projections</span><br />
+      <b>J. Yang</b>, P.-L. Poirion, A. Takeda, M. Dereziński<br />
+      <span class="pub-venue">Under review, 2026</span>
+    </li>
 
     <li>
       <span class="pub-title">Randomized Kaczmarz Methods with Beyond-Krylov Convergence</span><br />
@@ -87,8 +97,8 @@
     <li>
       <span class="pub-title">Have ASkotch: A Neat Solution for Large-scale Kernel Ridge Regression</span><br />
       P. Rathore, Z. Frangella, <b>J. Yang</b>, M. Dereziński, M. Udell<br />
-      <span class="pub-venue">Submitted, 2025</span><br />
-      <span class="pub-links"><a href="https://arxiv.org/abs/2407.10070">[arXiv]</a></span>
+      <span class="pub-venue">Journal of Machine Learning Research (JMLR), 2026</span><br />
+      <span class="pub-links"><a href="https://www.jmlr.org/papers/v27/25-0385.html">[JMLR]</a><a href="https://arxiv.org/abs/2407.10070">[arXiv]</a></span>
     </li>
 
     <li>
@@ -122,10 +132,19 @@
     <li>
       <span class="pub-title">Pixelated Butterfly: Simple and Efficient Sparse Training for Neural Network Models</span><br />
       T. Dao, B. Chen, K. Liang, <b>J. Yang</b>, Z. Song, A. Rudra, C. Ré<br />
-      <span class="pub-venue">International Conference on Learning Representations (ICLR), 2022</span><br />
+      <span class="pub-venue">International Conference on Learning Representations (ICLR), 2022, Spotlight</span><br />
       <span class="pub-links"><a href="https://arxiv.org/abs/2112.00029">[arXiv]</a></span>
     </li>
 
+  </ul>
+
+  <!-- ── Talks ── -->
+  <h2 id="talks">Talks</h2>
+  <ul>
+    <li><p>Faster Randomized Subspace Newton via Nesterov Acceleration. <i>INFORMS Annual Meeting</i>, San Francisco, Nov 2026</p></li>
+    <li><p>Randomized Kaczmarz Methods with Beyond-Krylov Convergence. <i>ICCOPT</i>, Los Angeles, Jul 2025</p></li>
+    <li><p>Faster Linear Systems via Multi-level Sketched Preconditioning. <i>SODA</i>, New Orleans, Jan 2025</p></li>
+    <li><p>Solving Dense Linear Systems Faster than via Preconditioning. <i>UMich Theory Lunch</i>, Mar 2024</p></li>
   </ul>
 
   <!-- ── Teaching ── -->
@@ -141,13 +160,13 @@
 
   <!-- ── Service ── -->
   <h2 id="service">Service</h2>
-  <p><b>Conference Reviewer:</b> NeurIPS (2024, 2026), ICML (2025, 2026), AISTATS (2025, 2026)</p>
+  <p><b>Conference Reviewer:</b> NeurIPS (2024, 2025), ICML (2025, 2026), ICLR (2027), AISTATS (2025, 2026)</p>
   <p><b>Workshop Reviewer:</b> M3L (2024), MOSS (2025)</p>
 
   <!-- ── Footer ── -->
   <div id="footer">
     <div id="footer-text">
-      &copy; 2026 Jiaming Yang &nbsp;&middot;&nbsp; Last updated April 2026
+      &copy; 2026 Jiaming Yang &nbsp;&middot;&nbsp; Last updated October 2026
     </div>
   </div>
 
